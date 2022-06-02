@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git code push') 
+        {
+            steps {
+                echo 'git code pushed'
+            }
+        }
+    
+    stages {
+        stage('buid') {
+            steps {
+                echo 'build code using maven project'
+            }
+        }
+    
+    stages {
+        stage('test') {
+            steps {
+                echo 'test using selnium/sonarqube project'
+            }
+        }
+    
+    stages {
+        stage('store/deploy') {
+            steps {
+                echo 'use docker'
+            }
+        }
+    } 
+    
+}
