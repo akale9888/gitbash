@@ -1,10 +1,10 @@
-pipeline {
+git addpipeline {
     agent any
 
     stages {
         stage('code push') {
             steps {
-                echo'pullcode"
+                echo'pullcode'
             }
         }
         stage('build') {
