@@ -2,33 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('git code push') 
-        {
+        stage('code push') {
             steps {
-                echo 'git code pushed'
+                echo'pullcode"
             }
         }
-    
-    stages {
-        stage('buid') {
+        stage('build') {
             steps {
-                echo 'build code using maven project'
+                echo'build'
+                sh'ls'
             }
         }
-    
-    stages {
         stage('test') {
             steps {
-                echo 'test using selnium/sonarqube project'
+               echo 'deploy'
             }
         }
-    
-    stages {
-        stage('store/deploy') {
-            steps {
-                echo 'use docker'
-            }
-        }
-    } 
-    
+    }
 }
+
