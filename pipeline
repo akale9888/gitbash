@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        agent node
         stage('git') {
             steps {
                 sh 'touch files2'
@@ -11,8 +12,7 @@ pipeline {
             steps {
                 echo 'build'
             }
-        }
-        agent node             
+        }          
        stage('selenium') {
             steps {
                 echo 'test'
