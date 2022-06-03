@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                echo 'Hello World'
+                sh 'touch files2'
             }
         }
         stage('maven') {
