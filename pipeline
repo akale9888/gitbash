@@ -12,13 +12,12 @@ pipeline {
                 echo 'build'
             }
         }
-        agent node {
-            
-        stage('selenium') {
+        agent node             
+       stage('selenium') {
             steps {
                 echo 'test'
             }
-        }
+        
         }
     }
 }
