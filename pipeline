@@ -1,23 +1,11 @@
-git addpipeline {
+pipeline {
     agent any
 
     stages {
-        stage('code push') {
+        stage('Hello') {
             steps {
-                echo'pullcode'
-            }
-        }
-        stage('build') {
-            steps {
-                echo'build'
-                sh'ls'
-            }
-        }
-        stage('test') {
-            steps {
-               echo 'deploy'
+                echo 'Hello World'
             }
         }
     }
 }
-
